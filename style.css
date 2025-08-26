@@ -57,3 +57,21 @@ body::before {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+
+#fetch-info {
+  background: linear-gradient(45deg, #00f, #0f0); /* Blue to green gradient */
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #00f, 0 0 10px #0f0, 0 0 20px #00f, 0 0 30px #0f0;
+  transition: 0.3s;
+}
+
+#btn:hover {
+  box-shadow: 0 0 10px #00f, 0 0 20px #0f0, 0 0 30px #00f, 0 0 40px #0f0, 0 0 50px #00f;
+  transform: scale(1.05);
+}
