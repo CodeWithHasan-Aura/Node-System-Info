@@ -8,8 +8,6 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
-// ✅ Serve static files (style.css, script.js, etc.)
-app.use(express.static(path.join(__dirname, "client")));
 
 // ✅ API route
 app.get("/api/os/:method", (req, res) => {
@@ -22,10 +20,6 @@ app.get("/api/os/:method", (req, res) => {
   }
 });
 
-// ✅ Serve index.html
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "index.html"));
-});
 
 app.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}`);
