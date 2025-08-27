@@ -7,7 +7,7 @@ methodSelect.addEventListener("change", () => {
 });
 
 function fetchOSInfo() {
-  fetch(`/api/os/${selectedMethod}`)
+  fetch(`https://node-system-info-85.onrender.com`)
     .then(response => response.json())
     .then(data => {
       document.getElementById("os-info").textContent =
