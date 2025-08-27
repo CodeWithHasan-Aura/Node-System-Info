@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>System Info</title>
+</head>
+<body>
+  <h1 id= "heading" class = "text-center text-4xl font-bold m-10">System Info</h1>
+  <div id="par" class= "m-10">
+  <select id="os-methods" class= " bg-transparent text-black" name="os-methods">
+  <option value="arch">os.arch()</option>
+  <option value="constants">os.constants</option>
+  <option value="cpus">os.cpus()</option>
+  <option value="endianness">os.endianness()</option>
+  <option value="freemem">os.freemem()</option>
+  <option value="homedir">os.homedir()</option>
+  <option value="hostname">os.hostname()</option>
+  <option value="loadavg">os.loadavg()</option>
+  <option value="networkInterfaces">os.networkInterfaces()</option>
+  <option value="platform">os.platform()</option>
+  <option value="release">os.release()</option>
+  <option value="tmpdir">os.tmpdir()</option>
+  <option value="totalmem">os.totalmem()</option>
+  <option value="type">os.type()</option>
+  <option value="uptime">os.uptime()</option>
+  <option value="userInfo">os.userInfo()</option>
+  <option value="version">os.version()</option>
+</select>
+
+  <button id="fetch-info">FETCH</button> 
+  <p id="os-info">Loading system info...</p>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
