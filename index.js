@@ -1,4 +1,5 @@
 const express = require("express");
+const express = require("express");
 const path = require("path");
 const os = require("os");
 const cors = require("cors");
@@ -8,10 +9,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
-// Serve frontend correctly (your folder is client, not frontend)
-app.use(express.static(path.join(__dirname, "../client")));
+// ✅ Serve static files (style.css, script.js, etc.)
+app.use(express.static(path.join(__dirname, "client")));
 
-// API route to send OS info
+// ✅ API route
 app.get("/api/os/:method", (req, res) => {
   const method = req.params.method;
 
@@ -22,9 +23,9 @@ app.get("/api/os/:method", (req, res) => {
   }
 });
 
-// Serve index.html
+// ✅ Serve index.html
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client", "index.html"));
+  res.sendFile(path.join(__dirname, "client", "index.html"));
 });
 
 app.listen(PORT, () => {
